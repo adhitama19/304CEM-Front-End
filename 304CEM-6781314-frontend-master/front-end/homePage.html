@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Stetique - Home</title>
+
+    <!-- Latest compiled and minified bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora,Julius+Sans-One,Lato,Montserrat" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <script src="https://use.fontawesome.com/39c53209ae.js"></script>
+
+    <!-- CSS Need to always be placed after the bootstrap -->
+    <link rel="stylesheet" type="text/css" href="homePage.css">
+
+
+
+  </head>
+
+
+
+
+
+  <body>
+
+
+    <!-- ====== Created a navigation bar (Navbar)====== -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="containter">
+
+        <!-- Header to place the logo -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-content-collapse"
+          aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="#"><span class="fa fa-handshake-o"></span> Stetique</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-content-collapse">
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Buy <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">All</a></li>
+                  <li><a href="#">CD's and Vinyl</a></li>
+                  <li><a href="#">Clothing</a></li>
+                  <li><a href="#">Accessories</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Sell</a></li>
+          </ul>
+
+                <!-- Right Navbar Area -->
+          <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form navbar-left">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <li><a href="#" data-toggle="modal" data-target="#signUp"><span class="fa fa-user-plus"></span>Sign Up</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#signIn"><span class="fa fa-user"></span>Sign In</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal Form Sign In -->
+    <div class="modal fade" id="signIn" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Close</span>
+            </button>
+
+            <h2 class="modal-title" id="myModalLabel">Sign in!</h2>
+
+          </div>
+
+          <!--  Modal Body Sign In-->
+          <div class="modal-body">
+
+            <form class="form-horizontal" role="form" data-toggle="validator">
+
+              <div class="form-group has-feedback">
+                <label class="col-sm-2 control-label" for="inputEmail2">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail2" placeholder="Email">
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                </div>
+              </div>
+
+              <div class="form-group has-feedback">
+                <label class="col-sm-2 control-label" for="inputPassword3">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal Form Sign Up -->
+
+    <div class="modal" id="signUp">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">x</button>
+            <h2 class="modal-title">Sign up!</h2>
+
+          </div>
+
+          <div class="modal-body">
+
+
+            <!-- <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12"> -->
+                  <form  class="form-horizontal" role="form" data-toggle="validator">
+
+                    <!-- Email  -->
+                    <div class="form-group has-feedback">
+
+                      <label for="inputEmail" class="control-label">Email</label>
+
+                      <div class="input-group">
+
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Username must atleast be 6 characters"
+                        data-error="Please write the correct email" data-minlength="6" required>
+
+                      </div>
+                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                      <div class="help-block with-errors">
+
+                      </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="form-group has-feedback">
+
+                      <label for="inputPassword" class="control-label">Password</label>
+
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="password" class="form-control" id="inputPassword2" placeholder="Password" data-match="#inputPassword2" data-minlength="6"
+                        pattern="^[a-zA-Z0-9_.-]*$" required>
+                        <!-- <span class="help-block">Password should atleast be 6 characters long</span> -->
+                      </div>
+
+                      <span class="help-block">Password should atleast be 6 characters long</span>
+                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+
+                    </div>
+
+                    <!-- Repeat Password -->
+
+                    <div class="form-group has-feedback">
+
+                      <label for="inputPassword" class="control-label">Repeat Password</label>
+
+                      <div class="input-group">
+
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="password" class="form-control" id="inputPassword2" placeholder="Password" data-match="#inputPassword2" data-minlength="6"
+                        pattern="^[a-zA-Z0-9_.-]*$" required>
+
+                      </div>
+
+                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+
+                    </div>
+
+                    <!-- Date of Birth -->
+
+                    <div class="form-group">
+                      <label for="dayBirth" class="control-label">Date of Birth:</label>
+                      <div class="input-group">
+
+
+                        <div class="col-sm-4">
+                          <select class="form-control" id="dayBirth">
+                            <option>Date</option>
+                          </select>
+                        </div>
+
+                        <div class="col-sm-4">
+                          <select class="form-control">
+                            <option>Month</option>
+                          </select>
+                        </div>
+
+                        <div class="col-sm-4">
+                          <select class="form-control">
+                            <option>Year</option>
+                          </select>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- Nationality -->
+
+                    <div class="form-group">
+
+                      <label for="nationality">Nationality</label>
+                      <select class="form-control" id="nationality">
+                        <option value=""> select one </option>
+
+                        <option value="afghan">Afghan</option>
+                        <option value="albanian">Albanian</option>
+                        <option value="algerian">Algerian</option>
+                        <option value="american">American</option>
+                        <option value="andorran">Andorran</option>
+                        <option value="angolan">Angolan</option>
+                        <option value="antiguans">Antiguans</option>
+                        <option value="argentinean">Argentinean</option>
+                        <option value="armenian">Armenian</option>
+                        <option value="australian">Australian</option>
+                        <option value="austrian">Austrian</option>
+                        <option value="azerbaijani">Azerbaijani</option>
+                        <option value="bahamian">Bahamian</option>
+                        <option value="bahraini">Bahraini</option>
+                        <option value="bangladeshi">Bangladeshi</option>
+                        <option value="barbadian">Barbadian</option>
+                        <option value="barbudans">Barbudans</option>
+                        <option value="batswana">Batswana</option>
+                        <option value="belarusian">Belarusian</option>
+                        <option value="belgian">Belgian</option>
+                        <option value="belizean">Belizean</option>
+                        <option value="beninese">Beninese</option>
+                        <option value="bhutanese">Bhutanese</option>
+                        <option value="bolivian">Bolivian</option>
+                        <option value="bosnian">Bosnian</option>
+                        <option value="brazilian">Brazilian</option>
+                        <option value="british">British</option>
+                        <option value="bruneian">Bruneian</option>
+                        <option value="bulgarian">Bulgarian</option>
+                        <option value="burkinabe">Burkinabe</option>
+                        <option value="burmese">Burmese</option>
+                        <option value="burundian">Burundian</option>
+                        <option value="cambodian">Cambodian</option>
+                        <option value="cameroonian">Cameroonian</option>
+                        <option value="canadian">Canadian</option>
+                        <option value="cape verdean">Cape Verdean</option>
+                        <option value="central african">Central African</option>
+                        <option value="chadian">Chadian</option>
+                        <option value="chilean">Chilean</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="colombian">Colombian</option>
+                        <option value="comoran">Comoran</option>
+                        <option value="congolese">Congolese</option>
+                        <option value="costa rican">Costa Rican</option>
+                        <option value="croatian">Croatian</option>
+                        <option value="cuban">Cuban</option>
+                        <option value="cypriot">Cypriot</option>
+                        <option value="czech">Czech</option>
+                        <option value="danish">Danish</option>
+                        <option value="djibouti">Djibouti</option>
+                        <option value="dominican">Dominican</option>
+                        <option value="dutch">Dutch</option>
+                        <option value="east timorese">East Timorese</option>
+                        <option value="ecuadorean">Ecuadorean</option>
+                        <option value="egyptian">Egyptian</option>
+                        <option value="emirian">Emirian</option>
+                        <option value="equatorial guinean">Equatorial Guinean</option>
+                        <option value="eritrean">Eritrean</option>
+                        <option value="estonian">Estonian</option>
+                        <option value="ethiopian">Ethiopian</option>
+                        <option value="fijian">Fijian</option>
+                        <option value="filipino">Filipino</option>
+                        <option value="finnish">Finnish</option>
+                        <option value="french">French</option>
+                        <option value="gabonese">Gabonese</option>
+                        <option value="gambian">Gambian</option>
+                        <option value="georgian">Georgian</option>
+                        <option value="german">German</option>
+                        <option value="ghanaian">Ghanaian</option>
+                        <option value="greek">Greek</option>
+                        <option value="grenadian">Grenadian</option>
+                        <option value="guatemalan">Guatemalan</option>
+                        <option value="guinea-bissauan">Guinea-Bissauan</option>
+                        <option value="guinean">Guinean</option>
+                        <option value="guyanese">Guyanese</option>
+                        <option value="haitian">Haitian</option>
+                        <option value="herzegovinian">Herzegovinian</option>
+                        <option value="honduran">Honduran</option>
+                        <option value="hungarian">Hungarian</option>
+                        <option value="icelander">Icelander</option>
+                        <option value="indian">Indian</option>
+                        <option value="indonesian">Indonesian</option>
+                        <option value="iranian">Iranian</option>
+                        <option value="iraqi">Iraqi</option>
+                        <option value="irish">Irish</option>
+                        <option value="israeli">Israeli</option>
+                        <option value="italian">Italian</option>
+                        <option value="ivorian">Ivorian</option>
+                        <option value="jamaican">Jamaican</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="jordanian">Jordanian</option>
+                        <option value="kazakhstani">Kazakhstani</option>
+                        <option value="kenyan">Kenyan</option>
+                        <option value="kittian and nevisian">Kittian and Nevisian</option>
+                        <option value="kuwaiti">Kuwaiti</option>
+                        <option value="kyrgyz">Kyrgyz</option>
+                        <option value="laotian">Laotian</option>
+                        <option value="latvian">Latvian</option>
+                        <option value="lebanese">Lebanese</option>
+                        <option value="liberian">Liberian</option>
+                        <option value="libyan">Libyan</option>
+                        <option value="liechtensteiner">Liechtensteiner</option>
+                        <option value="lithuanian">Lithuanian</option>
+                        <option value="luxembourger">Luxembourger</option>
+                        <option value="macedonian">Macedonian</option>
+                        <option value="malagasy">Malagasy</option>
+                        <option value="malawian">Malawian</option>
+                        <option value="malaysian">Malaysian</option>
+                        <option value="maldivan">Maldivan</option>
+                        <option value="malian">Malian</option>
+                        <option value="maltese">Maltese</option>
+                        <option value="marshallese">Marshallese</option>
+                        <option value="mauritanian">Mauritanian</option>
+                        <option value="mauritian">Mauritian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="micronesian">Micronesian</option>
+                        <option value="moldovan">Moldovan</option>
+                        <option value="monacan">Monacan</option>
+                        <option value="mongolian">Mongolian</option>
+                        <option value="moroccan">Moroccan</option>
+                        <option value="mosotho">Mosotho</option>
+                        <option value="motswana">Motswana</option>
+                        <option value="mozambican">Mozambican</option>
+                        <option value="namibian">Namibian</option>
+                        <option value="nauruan">Nauruan</option>
+                        <option value="nepalese">Nepalese</option>
+                        <option value="new zealander">New Zealander</option>
+                        <option value="ni-vanuatu">Ni-Vanuatu</option>
+                        <option value="nicaraguan">Nicaraguan</option>
+                        <option value="nigerien">Nigerien</option>
+                        <option value="north korean">North Korean</option>
+                        <option value="northern irish">Northern Irish</option>
+                        <option value="norwegian">Norwegian</option>
+                        <option value="omani">Omani</option>
+                        <option value="pakistani">Pakistani</option>
+                        <option value="palauan">Palauan</option>
+                        <option value="palestinian">Palestinian</option>
+                        <option value="panamanian">Panamanian</option>
+                        <option value="papua new guinean">Papua New Guinean</option>
+                        <option value="paraguayan">Paraguayan</option>
+                        <option value="peruvian">Peruvian</option>
+                        <option value="polish">Polish</option>
+                        <option value="portuguese">Portuguese</option>
+                        <option value="qatari">Qatari</option>
+                        <option value="romanian">Romanian</option>
+                        <option value="russian">Russian</option>
+                        <option value="rwandan">Rwandan</option>
+                        <option value="saint lucian">Saint Lucian</option>
+                        <option value="salvadoran">Salvadoran</option>
+                        <option value="samoan">Samoan</option>
+                        <option value="san marinese">San Marinese</option>
+                        <option value="sao tomean">Sao Tomean</option>
+                        <option value="saudi">Saudi</option>
+                        <option value="scottish">Scottish</option>
+                        <option value="senegalese">Senegalese</option>
+                        <option value="serbian">Serbian</option>
+                        <option value="seychellois">Seychellois</option>
+                        <option value="sierra leonean">Sierra Leonean</option>
+                        <option value="singaporean">Singaporean</option>
+                        <option value="slovakian">Slovakian</option>
+                        <option value="slovenian">Slovenian</option>
+                        <option value="solomon islander">Solomon Islander</option>
+                        <option value="somali">Somali</option>
+                        <option value="south african">South African</option>
+                        <option value="south korean">South Korean</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="sri lankan">Sri Lankan</option>
+                        <option value="sudanese">Sudanese</option>
+                        <option value="surinamer">Surinamer</option>
+                        <option value="swazi">Swazi</option>
+                        <option value="swedish">Swedish</option>
+                        <option value="swiss">Swiss</option>
+                        <option value="syrian">Syrian</option>
+                        <option value="taiwanese">Taiwanese</option>
+                        <option value="tajik">Tajik</option>
+                        <option value="tanzanian">Tanzanian</option>
+                        <option value="thai">Thai</option>
+                        <option value="togolese">Togolese</option>
+                        <option value="tongan">Tongan</option>
+                        <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+                        <option value="tunisian">Tunisian</option>
+                        <option value="turkish">Turkish</option>
+                        <option value="tuvaluan">Tuvaluan</option>
+                        <option value="ugandan">Ugandan</option>
+                        <option value="ukrainian">Ukrainian</option>
+                        <option value="uruguayan">Uruguayan</option>
+                        <option value="uzbekistani">Uzbekistani</option>
+                        <option value="venezuelan">Venezuelan</option>
+                        <option value="vietnamese">Vietnamese</option>
+                        <option value="welsh">Welsh</option>
+                        <option value="yemenite">Yemenite</option>
+                        <option value="zambian">Zambian</option>
+                        <option value="zimbabwean">Zimbabwean</option>
+
+                      </select>
+                    </div>
+
+
+                    <!-- Terms and Condition -->
+
+                    <div class="form-group">
+
+                      <label for="terms_condition">Terms & Condition</label>
+                      <textarea readonly rows="5" class="form-control" id="terms_condition">Bro Bro Broom</textarea>
+
+                    </div>
+
+                    <div class="checkbox">
+
+                      <label><input type="checkbox" name="terms">I agree to the terms and conditions</label>
+
+                    </div>
+
+
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+
+                  </form>
+                 <!-- </div>
+               </div>
+            </div> -->
+
+          </div>
+
+        </div> <!-- End modal content -->
+      </div> <!-- End modal dialog -->
+    </div> <!-- End modal all -->
+
+    <!-- Modal End -->
+
+
+
+
+   <!-- ======Created a carousel for the front homePage====== -->
+    <div id="carousel-main" class="carousel slide" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-main" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-main" data-slide-to="1"></li>
+        <li data-target="#carousel-main" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="ryan-holloway-170389.jpg" alt="Music Boss">
+        </div>
+
+        <div class="item">
+          <img src="simon-noh-304784.jpg" alt="Boss">
+        </div>
+
+        <div class="item">
+          <img src="yannis-papanastasopoulos-327476.jpg" alt="Jakarta">
+        </div>
+      </div>
+
+      <!-- Create a navigation for carousel image -->
+      <a class="left carousel-control" href="#carousel-main"
+      data-slide="prev">
+
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="right carousel-control" href="#carousel-main"
+      data-slide="next">
+
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+
+    </div>
+
+
+    <!-- Created recent sellers post  -->
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1><span class="fa fa-camera-retro"></span> Latest Post</h1>
+        <p>Latest items posted by the user</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 ">
+          <div class="thumbnail">
+            <img src="unnamed-3.jpg">
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 ">
+          <div class="thumbnail">
+            <img src="unnamed-4.jpg">
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 ">
+          <div class="thumbnail">
+            <img src="unnamed-7.jpg">
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 ">
+          <div class="thumbnail">
+            <img src="unnamed-3.jpg">
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 ">
+          <div class="thumbnail">
+            <img src="unnamed-4.jpg">
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 ">
+          <div class="thumbnail">
+            <img src="unnamed-7.jpg">
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 ">
+          <div class="thumbnail">
+            <img src="unnamed-3.jpg">
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 ">
+          <div class="thumbnail">
+            <img src="unnamed-4.jpg">
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 ">
+          <div class="thumbnail">
+            <img src="unnamed-7.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <!-- Create a registration form  -->
+
+
+
+
+
+
+                <!-- <div class="col-sm-10">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+
+                  </div>
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="inputPassword">Repeat Password</label>
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password must match!">
+                </div>
+
+
+
+
+
+                 -->
+
+
+
+
+
+
+
+
+
+    <!--  Footer -->
+
+    <footer>
+      <p>  Adhitama Budi Azmii 2017  </p>
+    </footer>
+
+
+
+
+
+
+
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- CDN for Bootstrap Validation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+  </body>
+
+
+
+
+</html>
